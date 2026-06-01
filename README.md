@@ -34,13 +34,7 @@ Exemplo de `appsettings.json` (trecho):
 
 **2) Restaurar dependências e preparar a database (migrations)**
 
-Abra um terminal e navegue até o diretório do backend:
-
-```powershell
-cd "E:\Visual Studio\repos\GestaoDeEmpreendimentos\GestaoDeEmpreendimentos"
-```
-
-Restore e build:
+Abra um terminal e navegue até o diretório do backend e realize os comandos de restore e build:
 
 ```powershell
 dotnet restore
