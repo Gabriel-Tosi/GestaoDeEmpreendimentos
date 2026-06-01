@@ -77,12 +77,6 @@ Por padrão a API costuma subir em `https://localhost:7052` (verifique o output 
 
 **4) Configurar e subir o frontend (Angular)**
 
-Abra outro terminal e navegue até o diretório do frontend:
-
-```powershell
-cd "E:\Visual Studio\repos\GestaoDeEmpreendimentos\GestaoDeEmpreendimentosUI\gestao-ui"
-```
-
 Instale dependências e inicie o servidor de desenvolvimento:
 
 ```powershell
