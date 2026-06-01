@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>{{ id ? 'Editar' : 'Novo' }} Empreendimento</h2>
+
+  <div *ngIf="loading()" class="loading">Carregando...</div>
+  <div *ngIf="error()" class="error">{{ error() }}</div>
+  <div *ngIf="success()" class="success">{{ success() }}</div>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field">
+      <label>Nome</label>
+      <input formControlName="nome" />
+      <div class="field-error" *ngIf="form.controls['nome'].invalid && form.controls['nome'].touched">
+        Nome é obrigatório (mín 3 caracteres).
+      </div>
+    </div>
+
+    <div class="field">
+      <label>CNPJ</label>
+      <input formControlName="cnpj" />
+      <div class="field-error" *ngIf="form.controls['cnpj'].invalid && form.controls['cnpj'].touched">
+        CNPJ é obrigatório.
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Endereço</label>
+      <input formControlName="endereco" />
+    </div>
+
+    <div *ngIf="id !== null" class="field">
+      <label>Ativo</label>
+      <input type="checkbox" [checked]="form.controls['ativo'].value" disabled />
+    </div>
+
+    <!-- Mensagem de bloqueio quando o empreendimento já está inativo -->
+    <div *ngIf="isInactive" class="error">Empreendimento inativo não pode ser editado.</div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="loading() || isInactive">Salvar</button>
+      <button type="button" (click)="voltar()">Cancelar</button>
+    </div>
+  </form>
+</div>

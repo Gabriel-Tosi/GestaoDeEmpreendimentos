@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GestaoDeEmpreendimentos</name>
+    </assembly>
+    <members>
+        <member name="T:GestaoDeEmpreendimentos.Dtos.EmpreendimentoCreateDto">
+            <summary>
+            DTO utilizado para criação de empreendimentos
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoCreateDto.Nome">
+            <summary>
+            Nome do empreendimento (mínimo 3 caracteres)
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoCreateDto.Cnpj">
+            <summary>
+            CNPJ do empreendimento
+            </summary>
+        </member>
+        <member name="T:GestaoDeEmpreendimentos.Dtos.EmpreendimentoReadDto">
+            <summary>
+            DTO de leitura retornado pelas APIs
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoReadDto.Nome">
+            <summary>Nome do empreendimento</summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoReadDto.Cnpj">
+            <summary>CNPJ</summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoReadDto.Endereco">
+            <summary>Endereço</summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoReadDto.Ativo">
+            <summary>Indica se está ativo</summary>
+        </member>
+        <member name="T:GestaoDeEmpreendimentos.Dtos.EmpreendimentoUpdateDto">
+            <summary>
+            DTO utilizado para atualização parcial (patch-like). Campos nulos não serão alterados.
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoUpdateDto.Nome">
+            <summary>
+            Nome (opcional)
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoUpdateDto.Cnpj">
+            <summary>
+            CNPJ (opcional)
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Dtos.EmpreendimentoUpdateDto.Endereco">
+            <summary>
+            Endereço (opcional)
+            </summary>
+        </member>
+        <member name="T:GestaoDeEmpreendimentos.Migrations.CriandoTabelaGestao">
+            <inheritdoc />
+        </member>
+        <member name="M:GestaoDeEmpreendimentos.Migrations.CriandoTabelaGestao.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GestaoDeEmpreendimentos.Migrations.CriandoTabelaGestao.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GestaoDeEmpreendimentos.Migrations.CriandoTabelaGestao.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Models.Empreendimento.Nome">
+            <summary>
+            Nome do empreendimento (obrigatório, mínimo 3 caracteres)
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Models.Empreendimento.Cnpj">
+            <summary>
+            CNPJ (obrigatório e único)
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Models.Empreendimento.Endereco">
+            <summary>
+            Endereço do empreendimento (opcional)
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Models.Empreendimento.Ativo">
+            <summary>
+            Indica se o empreendimento está ativo (soft-delete)
+            </summary>
+        </member>
+        <member name="P:GestaoDeEmpreendimentos.Models.Empreendimento.CreatedAt">
+            <summary>
+            Data de criação em UTC
+            </summary>
+        </member>
+    </members>
+</doc>

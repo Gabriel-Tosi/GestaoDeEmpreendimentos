@@ -1,0 +1,95 @@
+# =========================
+# Visual Studio / .NET
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+
+# Build folders
+**/bin/
+**/obj/
+**/publish/
+
+# Publish output
+*.dll
+*.exe
+*.app
+*.pdb
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Node / Angular
+# =========================
+# Node modules
+**/node_modules/
+
+# Angular build / cache
+**/dist/
+**/build/
+/.angular/
+**/.angular/
+
+# Local env files
+.env
+.env.*
+.env.local
+
+# npm
+package-lock.json
+yarn.lock
+
+# Editor directories and files
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# =========================
+# Database / secrets
+# =========================
+*.db
+*.sqlite
+secrets.json
+appsettings.*.Local
+appsettings.*.Local.json
+
+# User secrets (if used)
+secrets/
+
+# =========================
+# Specific project folders (UI + backend)
+# =========================
+# Frontend (GestaoDeEmpreendimentosUI)
+GestaoDeEmpreendimentosUI/gestao-ui/node_modules/
+GestaoDeEmpreendimentosUI/gestao-ui/dist/
+GestaoDeEmpreendimentosUI/gestao-ui/.angular/
+GestaoDeEmpreendimentosUI/gestao-ui/.env
+
+# Backend (GestaoDeEmpreendimentos)
+GestaoDeEmpreendimentos/**/bin/
+GestaoDeEmpreendimentos/**/obj/
+GestaoDeEmpreendimentos/*.db
+GestaoDeEmpreendimentos/*.sqlite
+
+# Ignore published certificates, user-specific and system files
+*.pfx
+*.key
+
+# End of .gitignore

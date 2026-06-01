@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Dashboard</h2>
+
+  <div class="card" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+    <div style="width:180px;height:180px;display:flex;align-items:center;justify-content:center">
+      <!-- Pie chart simples usando conic-gradient com proporção entre ativos e inativos -->
+      <div class="pie" [style.background]="'conic-gradient(#0a66c2 ' + (ativos() / (ativos() + inativos() || 1) * 360) + 'deg, #c62828 0deg)'"></div>
+    </div>
+    <div style="flex:1; min-width:220px;">
+      <div style="font-weight:700;font-size:1.2rem; margin-bottom:0.75rem;">Distribuição</div>
+      <div class="legend-item"><span class="legend-color ativos"></span>Ativos: <strong>{{ ativos() }}</strong></div>
+      <div class="legend-item"><span class="legend-color inativos"></span>Inativos: <strong>{{ inativos() }}</strong></div>
+    </div>
+  </div>
+</div>

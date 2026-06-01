@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Empreendimentos</h2>
+
+  <div *ngIf="loading()" class="loading">Carregando...</div>
+  <div *ngIf="error()" class="error">{{ error() }}</div>
+  <div *ngIf="success()" class="success">{{ success() }}</div>
+
+  <button (click)="novo()" class="btn">Novo</button>
+
+  <!-- Exibe a tabela apenas quando há registros e não está carregando -->
+  <table *ngIf="!loading() && data().length">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CNPJ</th>
+        <th>Endereço</th>
+        <th>Ativo</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data()">
+        <td>{{ item.id }}</td>
+        <td>{{ item.nome }}</td>
+        <td>{{ item.cnpj }}</td>
+        <td>{{ item.endereco }}</td>
+        <td>{{ item.ativo ? 'Sim' : 'Não' }}</td>
+        <td>
+          <button (click)="editar(item.id)">Editar</button>
+          <button (click)="deletar(item.id)">Inativar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!loading() && data().length === 0">Nenhum registro encontrado.</p>
+</div>
